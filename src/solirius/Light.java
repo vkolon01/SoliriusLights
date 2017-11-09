@@ -10,7 +10,7 @@ public class Light {
     
     /**
      * Light constructor
-     * @param color Sets the color of the light
+     * @param color Sets the color of the light and initializes the isOn state
      */
     public Light(String color){
         this.isOn = false;

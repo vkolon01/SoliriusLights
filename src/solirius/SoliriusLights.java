@@ -11,7 +11,7 @@ public class SoliriusLights {
      */
     public static void main(String[] args) {
         
-        //in a scenario where the colors could be very diverse and in large quantitise (e.g. stored as hex numbers)
+        //in a scenario where the colors could be very diverse and in large quantities (e.g. stored as hex numbers)
         //it instead would be best to have a seperate API for fetching all the values.
         String[] colors = {"Red", "Green", "White"};// all the possible colors that the lights can take 
         
@@ -19,7 +19,7 @@ public class SoliriusLights {
         int numOfColors = colors.length; // number of possible colors
         int numOfLights = DEFAULT_NUMBER_OF_LIGHTS;
         
-        //The number given through parameters is ensured to be a proper, positive integer.
+        //number given through parameter is ensured to be a proper, positive integer.
         try{
             if(Integer.parseInt(args[0]) > 0){
                 numOfLights = Integer.parseInt(args[0]);
@@ -27,7 +27,7 @@ public class SoliriusLights {
         }catch (NumberFormatException e){
         }catch (ArrayIndexOutOfBoundsException e){}
         
-        // Array of Lights initilization
+        // Array of Lights initialization
         Light[] lights = new Light[numOfLights];
         for(int i = 0; i < numOfLights; i++){
             lights[i] = new Light(colors[i%numOfColors]);

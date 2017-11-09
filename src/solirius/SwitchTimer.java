@@ -30,7 +30,7 @@ public class SwitchTimer {
     }
     
     /**
-     * switches the switches the isOn state in lights array at curIndex position
+     * switches isOn state of the light at a curIndex position
      * increments curIndex and prevIndex counters.
      */
     TimerTask switchLight = new TimerTask(){
@@ -49,7 +49,7 @@ public class SwitchTimer {
     
     /**
     * runs the timer task at the given fixed rate.
-    * offTimer starts with one second delay.
+    * timer starts with one second delay.
     */
     public void start(){
         timer.scheduleAtFixedRate(switchLight, new Date(),SEQUENCE_DURATION_IN_MILLISECONDS);
